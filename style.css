@@ -1,4 +1,71 @@
-h1 {
-	font-size: 300;
-	color: red;
-} 
+	h1 {
+      font-size: 65px;
+      color: rgba(110, 221, 21, 0.8);
+      font-family: "rockwell";
+    }
+    h2 {
+      font-size: 22px;
+      font-family: "rockwell";
+      color: rgba(181, 232, 02, 0.9);
+      text-align: left;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 12px solid rgba(11, 120, 53, 0.7);
+      border-radius: 180px;
+    }
+    .leftimg {
+      padding: 0px;
+      margin: 10px 10px 10px 10px;
+      width: 10%; height: %;
+      border: 8px solid rgba(11, 120, 53, 0.7);
+      position: relative; 
+      top: 20px;   
+      left: 5%;
+    }
+    .rightimg {
+      padding: 0px;
+      margin: 10px 10px 10px 10px;
+      width: 10%; height: %;
+      border: 8px solid rgba(11, 120, 53, 0.7);
+      position: relative;  
+      right: -80%;
+      bottom: 10%;
+  	}
+    .centerimg {
+      display: block;
+      margin: 0 auto;
+      border: 12px solid rgba(11, 120, 53, 0.7);
+      border-radius: 180px;
+    }
+    // ul {
+      padding: 15px;
+      background: rgba(100, 45, 12, 0.6);
+      margin: 0 auto;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+      font-family: "helvetica";
+      text-align: justifed;
+    }
+    button {
+      padding: 3px 10px 3px 10px;
+      margin: 10px;
+      background: rgba(137, 232, 128, 0.7);
+      border-radius: 180px; 
+      color: white;
+      font-family: "Verdana";
+      font-size: 12;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
