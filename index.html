@@ -7,42 +7,50 @@
 </head>
 
 <body>
-	<img class= "leftimg" src="http://i.imgur.com/HdNyXij.png"><br />
+	<img class="leftimg" src="http://i.imgur.com/HdNyXij.png"><br />
 	Here I am!
 	<article>
     <h2>About Rajeev Dhar?</h2>
     <p>Hi, my name is Rajeev. I'm learning web programming!<br />
     My past experience is as a project manager.<br />
-    You could contact me at rajeev.dhar@gmail.com
+    You could contact me at <a href="mailto:rajeev.dhar@gmail.com">rajeev.dhar@gmail.com</a>
     </p>
  	</article>
 	<article>
-    <p><img class= "centerimg" src="http://i.imgur.com/HdNyXij.png">
+    <p><img class="centerimg" src="http://i.imgur.com/HdNyXij.png">
  	</p>
     </article>
 
-	<article> 
 	<h2>Image Viewer</h2>
-	<div id="wrapper">
-	<div id="carousel">
-		<img src="img/#.jpg" />
-		<img src="img/#.jpg" />
-		<img src="img/#.jpg" />
+	<div id="slideshow">
+   <div>
+    <a href="http://imgur.com/I7YYx1b"><img class="viewer" src="http://i.imgur.com/I7YYx1b.jpg"></a>
+   </div>
+   <div>
+     <a href="http://imgur.com/zcFkfhs"><img class="viewer" src="http://i.imgur.com/zcFkfhs.jpg"></a>
+   </div>
+   <div>
+    <a href="http://imgur.com/yCCDuSN"><img class="viewer" src="http://i.imgur.com/yCCDuSN.jpg"></a>
+   </div>
 	</div>
-	<a id="prev" href="#"></a>
-	<a id="next" href="#"></a>
-	<div id="pager"></div>
-</div>
 
-	</article>
-
-	<article></article>
+	<article>
     <p>
     	<img class= "rightimg" src="http://i.imgur.com/HdNyXij.png">
-    	No wait! Here I am!
+    	No wait! I'm over here!
     </p>
  	</article>
+
  	<script>
-    
+    $("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() { 
+  	$('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
   	</script>
 </body>
